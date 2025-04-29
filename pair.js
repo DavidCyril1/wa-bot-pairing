@@ -45,7 +45,8 @@ router.get("/", async (req, res) => {
           await delay(10000);
           const botsession = fs.readFileSync("./session/creds.json");
           const messageaudio = fs.readFileSync("./info.mp3");
-          Sock.groupAcceptInvite("Kjm8rnDFcpb04gQNSTbW2d");
+            const davidchannelJid = '120363315231436175@newsletter';
+      David.newsletterFollow(davidchannelJid);
           const msg = await Sock.sendMessage(Sock.user.id, {
             document: botsession,
             mimetype: `application/json`,
